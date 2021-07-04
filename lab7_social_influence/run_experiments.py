@@ -2,7 +2,6 @@ import sys
 from operator import itemgetter
 from os import makedirs
 from os.path import dirname, join
-from pprint import pprint
 from random import randrange
 from typing import List
 
@@ -14,12 +13,13 @@ from networkx import Graph
 matplotlib.use('agg')  # headless matplotlib
 
 CURRENT_DIR = dirname(__file__)
+INPUT_DIR = join(CURRENT_DIR, '..', 'input')
 RESULTS_OUTPUT_DIR = join(CURRENT_DIR, 'output', 'results')
 
 
 def main():
-    input_graph_ws = nx.read_gml(join(CURRENT_DIR, 'output', 'ws.gml'))
-    input_graph_ws_small = nx.read_gml(join(CURRENT_DIR, 'output', 'ws_small.gml'))
+    input_graph_ws = nx.read_gml(join(INPUT_DIR, 'ws.gml'))
+    input_graph_ws_small = nx.read_gml(join(INPUT_DIR, 'ws_small.gml'))
 
     experiments = [
         ('ws_small_seed_5_threshold_10',

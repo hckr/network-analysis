@@ -1,8 +1,7 @@
 from os.path import dirname, join
-import sys
 import networkx as nx
 
-OUTPUT_DIR = join(dirname(__file__), 'output')
+OUTPUT_DIR = dirname(__file__)
 
 
 def main():
